@@ -1,6 +1,6 @@
 name: RegionGuard
 main: timberman.RegionGuard.RegionGuard
-authors: ['Timber1981','ollimulle']
+authors: ['Timber1981']
 version: 0.5.1 preDev
 description: Timberman.de WorldGuard Extension
 commands:
