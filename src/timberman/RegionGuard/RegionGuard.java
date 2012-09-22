@@ -2,6 +2,7 @@ package timberman.RegionGuard;
 
 import java.util.logging.Logger;
 
+
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 
@@ -11,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
+import commands.landcommands;
 
 public class RegionGuard extends JavaPlugin	{
 
@@ -21,7 +23,10 @@ public class RegionGuard extends JavaPlugin	{
 	
 	@Override
 	public void onEnable() {
-	
+		
+		// Setup Commands
+		getCommand("land").setExecutor(new landcommands(this));
+		// Setup Hooks
 		setupEconomy();
 		setupPermissions();
 		setupWorldGuard();
