@@ -2,6 +2,8 @@ package timberman.RegionGuard;
 
 import java.util.logging.Logger;
 
+import listeners.serverListener;
+
 
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -20,10 +22,11 @@ public class RegionGuard extends JavaPlugin	{
 	public WorldGuardPlugin WorldGuard = null;
 	public static Economy Economy = null;
 	public static Permission Permissions = null;
+	public static chunkManager CM;
 	
 	@Override
 	public void onEnable() {
-		
+		new serverListener(this);
 		// Setup Commands
 		getCommand("land").setExecutor(new landcommands(this));
 		// Setup Hooks
@@ -31,6 +34,8 @@ public class RegionGuard extends JavaPlugin	{
 		setupPermissions();
 		setupWorldGuard();
 		setupWorldEdit();
+		
+		this.CM = new chunkManager(this);
 		logConsole ("enabled!");
 	}
 	
@@ -40,6 +45,9 @@ public class RegionGuard extends JavaPlugin	{
 		logConsole ("disabled!");
 	}
 	
+	public chunkManager getChunkManager () {
+		return this.CM;
+	}
 	
 	private boolean setupPermissions()
     {
