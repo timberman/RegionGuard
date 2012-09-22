@@ -1,0 +1,7 @@
+# Enable MySQL (required, Setup your DB first)
+MySQL: false
+MySQLHost: localhost
+MySQLUsername: username
+MySQLPassword: password
+MySQLDatabase: databasename
+MySQLPort: 3306
