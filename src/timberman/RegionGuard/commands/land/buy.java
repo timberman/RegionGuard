@@ -1,4 +1,4 @@
-package commands.land;
+package timberman.RegionGuard.commands.land;
 
 import org.bukkit.command.CommandSender;
 

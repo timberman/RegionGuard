@@ -2,7 +2,6 @@ package timberman.RegionGuard;
 
 import java.util.logging.Logger;
 
-import listeners.serverListener;
 
 
 import net.milkbowl.vault.economy.Economy;
@@ -12,9 +11,11 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import timberman.RegionGuard.commands.landcommands;
+import timberman.RegionGuard.listeners.serverListener;
+
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
-import commands.landcommands;
 
 public class RegionGuard extends JavaPlugin	{
 

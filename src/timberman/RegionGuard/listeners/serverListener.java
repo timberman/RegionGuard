@@ -1,4 +1,4 @@
-package listeners;
+package timberman.RegionGuard.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

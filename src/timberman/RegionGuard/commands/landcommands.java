@@ -1,12 +1,12 @@
-package commands;
+package timberman.RegionGuard.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import commands.land.*;
 
 import timberman.RegionGuard.RegionGuard;
+import timberman.RegionGuard.commands.land.*;
 
 public class landcommands implements CommandExecutor {
 	RegionGuard plugin;
